@@ -128,8 +128,23 @@ html.light .glow {
   animation: spin 0.8s linear infinite;
 }
 
+.fade-up {
+  animation: fade-up 0.25s ease-out both;
+}
+
 @keyframes spin {
   to {
     transform: rotate(360deg);
+  }
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
