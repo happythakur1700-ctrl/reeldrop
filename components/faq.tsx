@@ -48,7 +48,7 @@ export function Faq() {
                   aria-expanded={expanded}
                   aria-controls={`faq-panel-${i}`}
                   onClick={() => setOpen(expanded ? null : i)}
-                  className="flex w-full items-center justify-between gap-4 py-5 text-left text-[15px] font-medium text-white/85 transition-colors hover:text-white"
+                  className="focus-ring flex w-full items-center justify-between gap-4 py-5 text-left text-[15px] font-medium text-white/85 transition-colors hover:text-white"
                 >
                   {item.q}
                   <svg

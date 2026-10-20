@@ -1,4 +1,5 @@
 import { Header } from "@/components/header";
+import { Footer } from "@/components/footer";
 import { Downloader } from "@/components/downloader";
 import { Faq } from "@/components/faq";
 
@@ -121,7 +122,8 @@ export default function Home() {
       <main>
         {/* Hero */}
         <section className="relative overflow-hidden">
-          <div className="mx-auto w-full max-w-6xl px-5 pb-16 pt-20 sm:px-8 md:pb-28 md:pt-20">
+          <div className="bg-grid absolute inset-0" aria-hidden="true" />
+          <div className="relative mx-auto w-full max-w-6xl px-5 pb-16 pt-20 sm:px-8 md:pb-28 md:pt-20">
             <p className="eyebrow mb-6 text-white/50">
               ReelDrop — Reel downloader
             </p>
@@ -140,7 +142,7 @@ export default function Home() {
               className="relative mt-10 scroll-mt-24 md:mt-14"
             >
               <div className="glow" aria-hidden="true" />
-              <div className="relative max-w-xl">
+              <div className="panel-glass relative max-w-xl rounded-2xl border border-line p-4 shadow-2xl shadow-black/30 sm:p-5">
                 <Downloader />
               </div>
             </div>
@@ -167,7 +169,7 @@ export default function Home() {
             </h2>
             <ol className="mt-10 grid gap-px overflow-hidden rounded-xl border border-line bg-line sm:grid-cols-3">
               {STEPS.map((step) => (
-                <li key={step.n} className="bg-panel p-6 sm:p-8">
+                <li key={step.n} className="card-hover bg-panel p-6 sm:p-8">
                   <div className="flex items-center justify-between">
                     <span className="display text-2xl text-white/25">
                       {step.n}
@@ -192,7 +194,7 @@ export default function Home() {
             </h2>
             <ul className="mt-10 grid grid-cols-1 gap-px overflow-hidden rounded-xl border border-line bg-line sm:grid-cols-2 lg:grid-cols-4">
               {FEATURES.map((f) => (
-                <li key={f.title} className="bg-panel p-6 sm:p-8">
+                <li key={f.title} className="card-hover bg-panel p-6 sm:p-8">
                   {f.icon}
                   <h3 className="display mt-5 text-base">{f.title}</h3>
                   <p className="mt-1.5 text-sm leading-relaxed text-white/55">
@@ -207,62 +209,7 @@ export default function Home() {
         <Faq />
       </main>
 
-      <footer className="border-t border-line" aria-labelledby="footer-heading">
-        <h2 id="footer-heading" className="sr-only">
-          Footer
-        </h2>
-        <div className="mx-auto w-full max-w-6xl px-5 py-12 sm:px-8">
-          <p className="display text-lg">
-            REEL<span className="accent-text">DROP</span>
-          </p>
-          <p className="mt-4 max-w-xl text-sm leading-relaxed text-white/45">
-            Download only content you own or have permission to save or reuse.
-            Respect creators' rights and Instagram's terms.
-          </p>
-          <p className="mt-4 text-sm text-white/45">
-            Curated by{" "}
-            <a
-              href="https://www.instagram.com/visualsbyhappy"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="font-medium text-white/80 underline decoration-accent/60 underline-offset-4 transition-colors hover:text-white hover:decoration-accent"
-            >
-              @visualsbyhappy
-            </a>{" "}
-            on Instagram
-          </p>
-          <nav aria-label="Footer" className="mt-8">
-            <ul className="flex flex-wrap items-center gap-x-8 gap-y-3">
-              <li>
-                <a
-                  href="/privacy"
-                  className="text-sm text-white/55 transition-colors hover:text-white"
-                >
-                  Privacy
-                </a>
-              </li>
-              <li>
-                <a
-                  href="/terms"
-                  className="text-sm text-white/55 transition-colors hover:text-white"
-                >
-                  Terms
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://www.instagram.com/visualsbyhappy"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-sm text-white/55 transition-colors hover:text-white"
-                >
-                  Contact
-                </a>
-              </li>
-            </ul>
-          </nav>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }

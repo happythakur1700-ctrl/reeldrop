@@ -72,7 +72,7 @@ export function ThemeToggle() {
           /* storage unavailable */
         }
       }}
-      className="inline-flex size-10 items-center justify-center rounded-md text-white/60 transition-colors hover:bg-panel hover:text-white"
+      className="focus-ring inline-flex size-10 items-center justify-center rounded-md text-white/60 transition-colors hover:bg-panel hover:text-white"
     >
       {light ? <MoonIcon /> : <SunIcon />}
     </button>
@@ -86,7 +86,7 @@ export function Header() {
         <a
           href="/"
           aria-label="ReelDrop home"
-          className="display text-lg tracking-tight"
+          className="focus-ring display text-lg tracking-tight"
         >
           REEL<span className="accent-text">DROP</span>
         </a>
@@ -95,7 +95,7 @@ export function Header() {
             <li>
               <a
                 href="#how-it-works"
-                className="text-sm text-white/60 transition-colors hover:text-white"
+                className="focus-ring text-sm text-white/60 transition-colors hover:text-white"
               >
                 How it works
               </a>
@@ -103,7 +103,7 @@ export function Header() {
             <li>
               <a
                 href="#faq"
-                className="text-sm text-white/60 transition-colors hover:text-white"
+                className="focus-ring text-sm text-white/60 transition-colors hover:text-white"
               >
                 FAQ
               </a>

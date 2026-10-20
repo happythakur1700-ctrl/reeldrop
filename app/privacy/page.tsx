@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Header } from "@/components/header";
+import { Footer } from "@/components/footer";
 
 export const metadata: Metadata = {
   title: "Privacy Policy — ReelDrop",
@@ -64,6 +65,7 @@ export default function PrivacyPage() {
           </section>
         </div>
       </main>
+          <Footer />
     </div>
   );
 }

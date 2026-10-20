@@ -262,7 +262,7 @@ export function Downloader() {
                 aria-label="Clear"
                 title="Clear"
                 onClick={reset}
-                className="inline-flex size-9 items-center justify-center rounded-md text-white/45 transition-colors hover:bg-white/10 hover:text-white"
+                className="focus-ring inline-flex size-9 items-center justify-center rounded-md text-white/45 transition-colors hover:bg-white/10 hover:text-white"
               >
                 <CloseIcon />
               </button>
@@ -272,7 +272,7 @@ export function Downloader() {
               aria-label="Paste from clipboard"
               title="Paste from clipboard"
               onClick={pasteFromClipboard}
-              className="inline-flex size-9 items-center justify-center rounded-md text-white/45 transition-colors hover:bg-white/10 hover:text-white disabled:opacity-50"
+              className="focus-ring inline-flex size-9 items-center justify-center rounded-md text-white/45 transition-colors hover:bg-white/10 hover:text-white disabled:opacity-50"
               disabled={busy}
             >
               <ClipboardPasteIcon />
@@ -283,7 +283,7 @@ export function Downloader() {
         <button
           type="submit"
           disabled={!valid || busy}
-          className="mt-3 inline-flex min-h-[52px] w-full items-center justify-center gap-2 rounded-lg bg-gradient-to-r from-accent-3 via-accent to-accent-2 px-7 text-sm font-semibold text-white transition-all hover:brightness-110 active:scale-[0.98] disabled:cursor-not-allowed disabled:opacity-40 disabled:hover:brightness-100 disabled:active:scale-100"
+          className="focus-ring mt-3 inline-flex min-h-[52px] w-full items-center justify-center gap-2 rounded-lg bg-gradient-to-r from-accent-3 via-accent to-accent-2 px-7 text-sm font-semibold text-white transition-all hover:brightness-110 active:scale-[0.98] disabled:cursor-not-allowed disabled:opacity-40 disabled:hover:brightness-100 disabled:active:scale-100"
         >
           {busy ? <SpinnerIcon /> : <DownloadIcon />}
           {busy ? "Fetching…" : "Download"}
@@ -318,7 +318,7 @@ export function Downloader() {
           <button
             type="button"
             onClick={() => void submit(url)}
-            className="inline-flex shrink-0 items-center gap-1.5 rounded-md border border-danger-border px-2.5 py-1.5 text-xs font-medium text-danger-fg transition-colors hover:bg-danger-border"
+            className="focus-ring inline-flex shrink-0 items-center gap-1.5 rounded-md border border-danger-border px-2.5 py-1.5 text-xs font-medium text-danger-fg transition-colors hover:bg-danger-border"
           >
             <RetryIcon />
             Retry
@@ -352,7 +352,7 @@ export function Downloader() {
                 href={url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex shrink-0 items-center gap-1 text-xs text-white/45 transition-colors hover:text-white"
+                className="focus-ring inline-flex shrink-0 items-center gap-1 text-xs text-white/45 transition-colors hover:text-white"
               >
                 Open on Instagram
                 <ExternalIcon />
@@ -381,7 +381,7 @@ export function Downloader() {
                 target="_blank"
                 rel="noopener noreferrer"
                 download
-                className="inline-flex min-h-[46px] flex-1 items-center justify-center gap-2 rounded-lg bg-gradient-to-r from-accent-3 via-accent to-accent-2 px-7 text-sm font-semibold text-white transition-all hover:brightness-110 active:scale-[0.98]"
+                className="focus-ring inline-flex min-h-[46px] flex-1 items-center justify-center gap-2 rounded-lg bg-gradient-to-r from-accent-3 via-accent to-accent-2 px-7 text-sm font-semibold text-white transition-all hover:brightness-110 active:scale-[0.98]"
               >
                 <DownloadIcon />
                 Download MP4
@@ -389,7 +389,7 @@ export function Downloader() {
               <button
                 type="button"
                 onClick={reset}
-                className="inline-flex min-h-[46px] items-center justify-center rounded-lg border border-line px-6 text-sm font-medium text-white/70 transition-colors hover:bg-white/5 hover:text-white"
+                className="focus-ring inline-flex min-h-[46px] items-center justify-center rounded-lg border border-line px-6 text-sm font-medium text-white/70 transition-colors hover:bg-white/5 hover:text-white"
               >
                 Try another
               </button>
