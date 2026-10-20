@@ -1,11 +1,13 @@
 import type { DownloadResponse, Provider } from "../types";
 import { instagrapiProvider } from "./instagrapi";
+import { apifyProvider } from "./apify";
 import { restProvider } from "./rest";
 import { rapidapiProvider } from "./rapidapi";
 
-/** Provider order: instagrapi first, then generic REST, then RapidAPI. */
+/** Provider order: instagrapi first, then Apify, then generic REST, then RapidAPI. */
 const providers: Provider[] = [
   instagrapiProvider,
+  apifyProvider,
   restProvider,
   rapidapiProvider,
 ];
