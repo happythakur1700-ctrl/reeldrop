@@ -1,45 +1,56 @@
-# ReelDrop
+# ReelDrop 🎬
 
-Instagram Reel downloader — Next.js (App Router) + Tailwind CSS v4 + TypeScript.
-Live: https://reeldrop-three.vercel.app
+**Instagram Reel downloader — paste a link, get the video.**
 
-## Providers (tried in this order)
+🔗 **Live:** https://reeldrop.happythakur1700.workers.dev
 
-1. **instagrapi** (primary) — [aiograpi-rest](https://github.com/subzeroid/instagrapi)
-   REST wrapper (`subzeroid/aiograpi-rest` Docker image). `GET /media?url=…`
-   with `X-Session-ID` auth; username/password login supported with session
-   caching and auto re-login on 401.
-2. **rest** — generic key-less REST provider (`{download_link, title, thumbnail}`
-   response shape).
-3. **rapidapi** — RapidAPI downloader (`X-RapidAPI-Key` / `X-RapidAPI-Host`).
+## What it does
 
-## Environment variables
+Paste any public Instagram Reel URL and ReelDrop fetches the video — with an inline preview player, thumbnail, and one-click MP4 download. No login, no Instagram credentials needed, works great on mobile.
 
-Copy `.env.example` to `.env.local` for development, or set them in
-Vercel → Settings → Environment Variables for production:
+## Tech stack
 
-```
-INSTAGRAPI_URL=https://your-aiograpi-host
-INSTAGRAPI_SESSION_ID=<instagram sessionid cookie>
-# or:
-INSTAGRAPI_USERNAME=...
-INSTAGRAPI_PASSWORD=...
-```
+| Layer | Technology |
+|---|---|
+| Framework | [vinext](https://github.com/cloudflare/vinext) (Next.js App Router on Vite) |
+| Styling | Tailwind CSS v4 |
+| Hosting | Cloudflare Workers |
+| Download provider | [Apify](https://apify.com/snapinsta/instagram-downloader-api) (snapinsta actor) |
 
-Until a provider is configured, the API honestly reports
-`NOT_CONFIGURED (503)`.
+## Features
+
+- ⚡ **Auto-fetch on paste** — paste a Reel link anywhere on the page and it starts immediately
+- 🎥 **Inline video preview** — watch before downloading
+- 🌗 **Light/dark theme** — persisted preference, Instagram-gradient accents
+- 🔒 **Honest errors** — typed error mapping (private, deleted, rate-limited, not configured) instead of silent failures
+- ⌨️ **Keyboard-first** — shared accent focus rings, global Ctrl+V support
+
+## Provider chain
+
+ReelDrop tries providers in order until one is configured:
+
+1. **instagrapi** — self-hosted [aiograpi-rest](https://github.com/subzeroid/instagrapi) (unlimited, needs your own deployment)
+2. **Apify** — snapinsta actor (currently active, free tier)
+3. **rest** — generic keyless REST provider
+4. **rapidapi** — RapidAPI downloader
+
+Credentials live as Cloudflare Worker secrets — never in this repo.
 
 ## Develop
 
 ```bash
 npm install
-npm run dev
+npm run dev          # Next.js dev server
+npm run dev:vinext   # vinext dev server (Cloudflare runtime)
 ```
 
 ## Deploy
 
 ```bash
-npm i -g vercel
-vercel login
-vercel --prod
+npx wrangler secret put APIFY_API_TOKEN   # or your provider's secret
+npx @vinext/cloudflare deploy
 ```
+
+## Legal
+
+Download only content you own or have permission to save. ReelDrop is not affiliated with Instagram or Meta.
