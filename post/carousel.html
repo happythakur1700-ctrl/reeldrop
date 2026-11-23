@@ -1,0 +1,104 @@
+<!doctype html><html><head><meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;800&family=JetBrains+Mono:wght@500;700&display=block" rel="stylesheet">
+<style>
+:root{--paper:#F3EEE4;--ink:#141210;--accent:#D9572B;--muted:#6E665C;--line:#141210}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#888;font-family:Inter,sans-serif;color:var(--ink)}
+.s{width:1080px;height:1350px;background:var(--paper);position:relative;overflow:hidden;padding:88px 84px;display:flex;flex-direction:column;margin-bottom:20px}
+.s.dark{background:var(--ink);color:var(--paper)}
+.top{display:flex;justify-content:space-between;font:600 22px/1 'JetBrains Mono';letter-spacing:.08em;text-transform:uppercase;border-bottom:2px solid currentColor;padding-bottom:22px}
+.bot{margin-top:auto;display:flex;justify-content:space-between;align-items:center;font:500 22px/1 'JetBrains Mono';letter-spacing:.06em;text-transform:uppercase;border-top:2px solid currentColor;padding-top:22px}
+.serif{font-family:'Instrument Serif',serif;font-weight:400}
+h1{font-family:'Instrument Serif';font-weight:400;font-size:178px;line-height:.88;letter-spacing:-.025em}
+h2{font-family:'Instrument Serif';font-weight:400;font-size:116px;line-height:.92;letter-spacing:-.02em}
+em{font-style:italic;color:var(--accent)}
+.kicker{font:700 24px/1 'JetBrains Mono';color:var(--accent);letter-spacing:.1em;text-transform:uppercase}
+.big-num{font-family:'Instrument Serif';font-size:420px;line-height:.75;color:var(--accent);position:absolute;right:60px;top:150px;opacity:.95}
+p.body{font-size:38px;line-height:1.38;font-weight:400;max-width:860px}
+.term{background:var(--ink);color:#EDE6D8;border-radius:22px;padding:40px 44px;font:500 29px/1.55 'JetBrains Mono'}
+.dark .term{background:#24201C}
+.term .c{color:#8F877B}.term .a{color:#F08A5D}
+.tree{font:500 34px/1.7 'JetBrains Mono'}
+.tree b{color:var(--accent);font-weight:700}
+.pill{display:inline-block;border:2px solid currentColor;border-radius:999px;padding:12px 26px;font:600 24px/1 'JetBrains Mono';text-transform:uppercase;letter-spacing:.06em}
+.row{display:flex;gap:22px;flex-wrap:wrap}
+.swipe{color:var(--accent)}
+</style></head><body>
+
+<!-- 1 COVER -->
+<section class="s" id="s1">
+  <div class="top"><span>Field notes / 01</span><span>Workflow</span></div>
+  <div style="margin-top:110px" class="kicker">No Premiere. No CapCut.</div>
+  <h1 style="margin-top:40px">I edit my reels<br>with <em>3 prompts</em><br>&amp; a terminal.</h1>
+  <p class="body" style="margin-top:56px;color:var(--muted)">How I cut retakes, burn captions and match a reference style using Claude Code. Every step inside.</p>
+  <div class="bot"><span>Save this</span><span class="swipe">Swipe →</span></div>
+</section>
+
+<!-- 2 SETUP -->
+<section class="s" id="s2">
+  <div class="top"><span>Step 0</span><span>The setup</span></div>
+  <div class="big-num">0</div>
+  <h2 style="margin-top:120px">Four folders.<br><em>That's the app.</em></h2>
+  <div class="tree" style="margin-top:70px">
+reels/<br>
+├─ <b>raw/</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;your phone footage<br>
+├─ <b>refs/</b> &nbsp;&nbsp;&nbsp;reels you love<br>
+├─ <b>assets/</b> &nbsp;logo, fonts, music<br>
+└─ <b>out/</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;finished edits land here
+  </div>
+  <p class="body" style="margin-top:60px;color:var(--muted)">Open the folder in Claude Code. It installs ffmpeg + Whisper for you on the first run.</p>
+  <div class="bot"><span>2 / 6</span><span class="swipe">→</span></div>
+</section>
+
+<!-- 3 PROMPT 1 -->
+<section class="s dark" id="s3">
+  <div class="top"><span>Prompt 01</span><span>Kill the retakes</span></div>
+  <div class="big-num">1</div>
+  <h2 style="margin-top:120px">Cut every<br><em>bad take.</em></h2>
+  <div class="term" style="margin-top:80px">
+<span class="c">&gt; prompt</span><br>
+Transcribe everything in <span class="a">raw/</span>. Where I repeat a line, keep only the last take. Remove silences over 0.4s and filler words. Stitch it into <span class="a">out/cut.mp4</span>.
+  </div>
+  <p class="body" style="margin-top:50px;opacity:.7">20 minutes of fumbling → a tight 45-second cut.</p>
+  <div class="bot"><span>3 / 6</span><span class="swipe">→</span></div>
+</section>
+
+<!-- 4 PROMPT 2 -->
+<section class="s" id="s4">
+  <div class="top"><span>Prompt 02</span><span>Captions</span></div>
+  <div class="big-num">2</div>
+  <h2 style="margin-top:120px">Captions that<br><em>actually pop.</em></h2>
+  <div class="term" style="margin-top:80px">
+<span class="c">&gt; prompt</span><br>
+Add word-by-word captions to <span class="a">out/cut.mp4</span>. Bold sans, 3 words max per line, centered in the lower third. Highlight the key word in orange.
+  </div>
+  <div class="row" style="margin-top:50px"><span class="pill">Word timing</span><span class="pill">Safe zones</span><span class="pill">Your font</span></div>
+  <div class="bot"><span>4 / 6</span><span class="swipe">→</span></div>
+</section>
+
+<!-- 5 PROMPT 3 -->
+<section class="s dark" id="s5">
+  <div class="top"><span>Prompt 03</span><span>Steal the vibe</span></div>
+  <div class="big-num">3</div>
+  <h2 style="margin-top:120px">Edit it like<br><em>your favourite.</em></h2>
+  <div class="term" style="margin-top:80px">
+<span class="c">&gt; prompt</span><br>
+Study the reels in <span class="a">refs/</span>: pacing, zooms, colour, music drops. Apply that style to <span class="a">out/cut.mp4</span>. Export 1080×1920 to <span class="a">out/final.mp4</span>.
+  </div>
+  <p class="body" style="margin-top:50px;opacity:.7">Punch-ins on beats, colour grade, music under the voice.</p>
+  <div class="bot"><span>5 / 6</span><span class="swipe">→</span></div>
+</section>
+
+<!-- 6 CTA -->
+<section class="s" id="s6" style="background:var(--accent);color:var(--ink)">
+  <div class="top"><span>The full guide</span><span>Free</span></div>
+  <h1 style="margin-top:150px">Want the<br><span class="serif" style="font-style:italic">exact</span> prompts?</h1>
+  <p class="body" style="margin-top:60px">Setup, all 3 prompts, and the fixes for when an edit goes wrong.</p>
+  <div style="margin-top:80px;background:var(--ink);color:var(--paper);border-radius:28px;padding:48px 52px;display:flex;align-items:center;justify-content:space-between">
+    <span style="font-size:40px;font-weight:500">Comment</span>
+    <span style="font:700 76px/1 'JetBrains Mono';letter-spacing:.04em">"CLAUDE"</span>
+  </div>
+  <p style="margin-top:28px;font:500 26px/1.4 'JetBrains Mono';text-transform:uppercase;letter-spacing:.05em">& I'll DM it to you. Follow so it reaches you.</p>
+  <div class="bot"><span>6 / 6</span><span>Save · Share</span></div>
+</section>
+</body></html>
