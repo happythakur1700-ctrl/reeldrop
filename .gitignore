@@ -10,3 +10,5 @@ next-env.d.ts
 /dist/
 .vinext/
 .cloudflare/
+videos/*/out/
+videos/*/.cache/

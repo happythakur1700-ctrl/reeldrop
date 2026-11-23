@@ -1,0 +1,16 @@
+{
+  "extends": "clean",
+  "name": "redblue",
+  "bg": "#F2F1EE",
+  "ink": "#111111",
+  "muted": "#555555",
+  "surface": "#FFFFFF",
+  "accent": "red",
+  "colors": { "red": "#E3261C", "blue": "#2236E8", "orange": "#F0561D" },
+  "background": "plain",
+  "fonts": {
+    "display": { "family": "DM Serif Display", "weight": 400 },
+    "hand": { "family": "DM Serif Italic", "weight": 400 },
+    "body": { "family": "Inter", "weight": 800 }
+  }
+}

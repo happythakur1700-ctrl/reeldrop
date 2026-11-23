@@ -1,0 +1,96 @@
+{
+  "title": "Reels edit karo Claude Code se",
+  "theme": "look.json",
+  "size": "reels",
+  "voice": "hf_alpha",
+  "pace": 1.15,
+  "music": {
+    "volume": 0.35
+  },
+  "captions": false,
+  "transition": "cut",
+  "cover": "hook@0.6",
+  "defaults": "0.6",
+  "language": "hi",
+  "watermark": false,
+  "fonts": [
+    {
+      "family": "DM Serif Display",
+      "src": "assets/fonts/DMSerifDisplay-Regular.woff2",
+      "weight": 400
+    },
+    {
+      "family": "DM Serif Italic",
+      "src": "assets/fonts/DMSerifDisplay-Italic.woff2",
+      "weight": 400
+    },
+    {
+      "family": "Inter",
+      "src": "assets/fonts/Inter.woff2",
+      "weight": 800
+    }
+  ],
+  "heard": {
+    "ज़रूरत": [
+      "जरूरत"
+    ],
+    "फ़ोल्डर": [
+      "फुल्डर"
+    ],
+    "फ़ुटेज": [
+      "फुटेज"
+    ],
+    "रेफ़्स": [
+      "रेफ्स"
+    ],
+    "पसंद": [
+      "पसन्द"
+    ],
+    "साइलेंस": [
+      "साईलेंस"
+    ],
+    "फ़िलर": [
+      "फिलर"
+    ],
+    "वर्ड": [
+      "वर्द"
+    ],
+    "प्रॉम्प्ट": [
+      "प्रम्प",
+      "प्रोम्त"
+    ],
+    "तीसर": [
+      "तीस्र"
+    ],
+    "देखत": [
+      "देकत"
+    ],
+    "ज़ूम": [
+      "जूम"
+    ],
+    "रील पर": [
+      "रील्पर"
+    ],
+    "प्रॉम्प्ट्स": [
+      "प्रम्ट्स",
+      "प्राम्तिस"
+    ],
+    "चाहिए": [
+      "चाहिय"
+    ],
+    "सीध": [
+      "सीद"
+    ],
+    "क्लॉड": [
+      "खलोड",
+      "ख्लोर",
+      "कलोड"
+    ],
+    "फ़ॉलो": [
+      "फालो"
+    ],
+    "म्यूज़िक": [
+      "मुज्विक"
+    ]
+  }
+}
