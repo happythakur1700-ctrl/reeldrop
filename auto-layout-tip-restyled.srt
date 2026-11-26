@@ -1,0 +1,95 @@
+1
+00:00:00,250 --> 00:00:02,450
+card ekdum cramped lag raha hai,
+
+2
+00:00:02,500 --> 00:00:04,950
+aur aap seedha gap badha dete ho?
+
+3
+00:00:05,000 --> 00:00:06,300
+ruko, yahi galti hai.
+
+4
+00:00:06,450 --> 00:00:07,950
+auto layout mein spacing
+
+5
+00:00:08,000 --> 00:00:09,600
+do tarah ki hoti hai
+
+6
+00:00:09,750 --> 00:00:11,100
+gap aur padding.
+
+7
+00:00:11,200 --> 00:00:12,350
+ek thali socho.
+
+8
+00:00:12,450 --> 00:00:14,900
+katoriyon ke beech jo jagah hai,
+
+9
+00:00:15,000 --> 00:00:16,100
+woh hai gap.
+
+10
+00:00:16,200 --> 00:00:18,100
+aur katori aur thali ke kinare
+
+11
+00:00:18,200 --> 00:00:19,600
+ke beech jo jagah hai,
+
+12
+00:00:19,700 --> 00:00:20,950
+woh hai padding.
+
+13
+00:00:21,000 --> 00:00:22,400
+ab figma mein dekho.
+
+14
+00:00:22,500 --> 00:00:24,100
+gap badhao, toh sirf items
+
+15
+00:00:24,200 --> 00:00:26,100
+ek dusre se door hote hain.
+
+16
+00:00:26,200 --> 00:00:28,600
+padding badhao, toh poora content
+
+17
+00:00:28,700 --> 00:00:30,400
+kinare se saans leta hai.
+
+18
+00:00:30,500 --> 00:00:33,600
+card cramped hai? pehle padding check karo.
+
+19
+00:00:33,700 --> 00:00:35,600
+items chipke hain? toh gap.
+
+20
+00:00:35,700 --> 00:00:37,400
+bas itna yaad rakho.
+
+21
+00:00:37,500 --> 00:00:38,900
+gap beech mein,
+
+22
+00:00:39,000 --> 00:00:40,100
+padding andar.
+
+23
+00:00:40,200 --> 00:00:42,100
+aise hi figma tips ke liye,
+
+24
+00:00:42,200 --> 00:00:44,600
+follow karo @visualsbyhappy
